@@ -1,11 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -70,6 +65,11 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+}
+/* i added this as it makes the video move with the screen size, had to set the frame size for the video too in code */
+iframe {
+	width: 100%;
+	max-height: fit-content;
 }
 
 /* Basic */
@@ -2597,17 +2597,26 @@ input, select, textarea {
 		.image img {
 			display: block;
 		}
-
-		.image.left, .image.right {
+		
+		/* added an option to centre images */
+		.image.left, .image.right, .image.centre {
 			max-width: 40%;
 		}
-
-			.image.left img, .image.right img {
+		
+		/* added an option to centre images */
+			.image.left img, .image.right img, .image.centre img {
 				width: 100%;
 			}
 
 		.image.left {
 			float: left;
+			margin: 0 2rem 2rem 0;
+			top: 0.75rem;
+		}
+
+/* 		added this to centre images */
+		.image.centre {
+			float: middle;
 			margin: 0 2rem 2rem 0;
 			top: 0.75rem;
 		}
@@ -2654,6 +2663,7 @@ input, select, textarea {
 
 			.image.main {
 				margin: 2rem 0;
+				
 			}
 
 		}
@@ -2919,9 +2929,10 @@ input, select, textarea {
 			position: relative;
 		}
 
-		header > p {
+		/* I commented this out as I dont want an text italic - an this can be easily changed in HTML  */
+		/* header > p {
 			font-style: italic;
-		}
+		} */
 
 		header > h1 + p {
 			font-size: 1.1rem;
@@ -2949,11 +2960,22 @@ input, select, textarea {
 			text-align: center;
 		}
 
+		/* added this to be able to centre */
+		header.centre {
+			margin: 0 0 4rem 0;
+			text-align: center;
+		}
 			header.major > :last-child {
 				margin-bottom: 0;
 			}
 
 			header.major > p {
+				margin-top: 0;
+				text-align: center;
+			}
+
+			/* added this to be able to centre */
+			header.centre > p {
 				margin-top: 0;
 				text-align: center;
 			}
@@ -3778,8 +3800,10 @@ input, select, textarea {
 			text-align: center;
 		}
 
+		/* i changed this so that when i has the centred post in index page there is massive spacing 
+		in the middle of the page */
 		#main > .post {
-			padding: 8rem 8rem 6rem 8rem ;
+			padding: 4rem 8rem 2rem 4rem ;
 		}
 
 			#main > .post header.major > .date {
