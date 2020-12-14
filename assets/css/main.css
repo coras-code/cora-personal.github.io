@@ -71,6 +71,21 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+/* i added this as it makes the video move with the screen size, had to set the frame size for the video too in code */
+iframe {
+	width: 100%;
+	max-height: fit-content;
+}
+
+/* video {
+	width: 100%;
+	max-height: fit-content;
+}
+video.controls
+{
+	width: 100%;
+	max-height: fit-content;
+} */
 
 /* Basic */
 
@@ -2598,16 +2613,39 @@ input, select, textarea {
 			display: block;
 		}
 
-		.image.left, .image.right {
-			max-width: 40%;
+		.image.left, .image.right, .image.centre {
+			max-width: 50%;
 		}
 
-			.image.left img, .image.right img {
+		/* added this to replace the main image, as this was too big DIDNT WORK */
+		 .image.centreMain {
+			max-width: 100%;
+		}
+		.image.centreMain img {
+			width: 75%;
+		}
+
+			.image.left img, .image.right img, .image.centre img {
 				width: 100%;
 			}
+		
+		
 
 		.image.left {
 			float: left;
+			margin: 0 2rem 2rem 0;
+			top: 0.75rem;
+		}
+
+		.image.centre {
+			float: middle;
+			margin: 0 2rem 2rem 0;
+			top: 0.75rem;
+		}
+
+		/* added this to replace the main image, as this was too big DIDNT WORK*/
+		.image.centreMain {
+			justify-content: center;
 			margin: 0 2rem 2rem 0;
 			top: 0.75rem;
 		}
@@ -2633,6 +2671,7 @@ input, select, textarea {
 			}
 
 		.image.main {
+			justify-content: center;
 			display: block;
 			margin: 4rem 0;
 			width: 100%;
@@ -2644,6 +2683,7 @@ input, select, textarea {
 
 			.image.main img {
 				width: 100%;
+				
 			}
 
 		@media screen and (max-width: 736px) {
@@ -2653,7 +2693,9 @@ input, select, textarea {
 			}
 
 			.image.main {
+				float: middle;
 				margin: 2rem 0;
+				
 			}
 
 		}
@@ -2919,9 +2961,9 @@ input, select, textarea {
 			position: relative;
 		}
 
-		header > p {
+		/* header > p {
 			font-style: italic;
-		}
+		} */
 
 		header > h1 + p {
 			font-size: 1.1rem;
@@ -2949,11 +2991,21 @@ input, select, textarea {
 			text-align: center;
 		}
 
+		header.centre {
+			margin: 0 0 4rem 0;
+			text-align: center;
+		}
 			header.major > :last-child {
 				margin-bottom: 0;
 			}
 
 			header.major > p {
+				margin-top: 0;
+				text-align: center;
+			}
+
+			/* added this to be able to centre */
+			header.centre > p {
 				margin-top: 0;
 				text-align: center;
 			}
@@ -3765,7 +3817,7 @@ input, select, textarea {
 	}
 
 		#main > * {
-			padding: 4rem 4rem 2rem 4rem ;
+			padding: 0rem 4rem 2rem 4rem ;
 			border-top: solid 2px #eeeeee;
 			margin: 0;
 		}
@@ -3778,8 +3830,10 @@ input, select, textarea {
 			text-align: center;
 		}
 
+		/* i changed this so that when i has the centred post in index page there is massive spacing 
+		in the middle of the page */
 		#main > .post {
-			padding: 8rem 8rem 6rem 8rem ;
+			padding: 4rem 8rem 2rem 4rem ;
 		}
 
 			#main > .post header.major > .date {
@@ -3910,7 +3964,7 @@ input, select, textarea {
 				}
 
 				#main > .posts > article:nth-child(-n + 2) {
-					border-top-width: 2px;
+					border-top-width: 0px;
 				}
 
 				#main > .posts > article:nth-child(n) {
