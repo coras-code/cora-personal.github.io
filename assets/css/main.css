@@ -3787,7 +3787,8 @@ iframe {
 	}
 
 		#main > * {
-			padding: 4rem 4rem 2rem 4rem ;
+/* 			padding: 4rem 4rem 2rem 4rem ; */
+			padding: 0rem 4rem 2rem 4rem ;
 			border-top: solid 2px #eeeeee;
 			margin: 0;
 		}
@@ -3803,6 +3804,7 @@ iframe {
 		/* i changed this so that when i has the centred post in index page there is massive spacing 
 		in the middle of the page */
 		#main > .post {
+/* 			padding: 8rem 8rem 2rem 4rem ; */
 			padding: 4rem 8rem 2rem 4rem ;
 		}
 
