@@ -1,11 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -76,16 +71,6 @@ iframe {
 	width: 100%;
 	max-height: fit-content;
 }
-
-/* video {
-	width: 100%;
-	max-height: fit-content;
-}
-video.controls
-{
-	width: 100%;
-	max-height: fit-content;
-} */
 
 /* Basic */
 
@@ -2612,24 +2597,16 @@ video.controls
 		.image img {
 			display: block;
 		}
-
+		
+		/* added an option to centre images */
 		.image.left, .image.right, .image.centre {
-			max-width: 50%;
+			max-width: 40%;
 		}
-
-		/* added this to replace the main image, as this was too big DIDNT WORK */
-		 .image.centreMain {
-			max-width: 100%;
-		}
-		.image.centreMain img {
-			width: 75%;
-		}
-
+		
+		/* added an option to centre images */
 			.image.left img, .image.right img, .image.centre img {
 				width: 100%;
 			}
-		
-		
 
 		.image.left {
 			float: left;
@@ -2637,15 +2614,9 @@ video.controls
 			top: 0.75rem;
 		}
 
+/* 		added this to centre images */
 		.image.centre {
 			float: middle;
-			margin: 0 2rem 2rem 0;
-			top: 0.75rem;
-		}
-
-		/* added this to replace the main image, as this was too big DIDNT WORK*/
-		.image.centreMain {
-			justify-content: center;
 			margin: 0 2rem 2rem 0;
 			top: 0.75rem;
 		}
@@ -2671,7 +2642,6 @@ video.controls
 			}
 
 		.image.main {
-			justify-content: center;
 			display: block;
 			margin: 4rem 0;
 			width: 100%;
@@ -2683,7 +2653,6 @@ video.controls
 
 			.image.main img {
 				width: 100%;
-				
 			}
 
 		@media screen and (max-width: 736px) {
@@ -2693,7 +2662,6 @@ video.controls
 			}
 
 			.image.main {
-				float: middle;
 				margin: 2rem 0;
 				
 			}
@@ -2961,6 +2929,7 @@ video.controls
 			position: relative;
 		}
 
+		/* I commented this out as I dont want an text italic - an this can be easily changed in HTML  */
 		/* header > p {
 			font-style: italic;
 		} */
@@ -2991,6 +2960,7 @@ video.controls
 			text-align: center;
 		}
 
+		/* added this to be able to centre */
 		header.centre {
 			margin: 0 0 4rem 0;
 			text-align: center;
@@ -3817,7 +3787,7 @@ video.controls
 	}
 
 		#main > * {
-			padding: 0rem 4rem 2rem 4rem ;
+			padding: 4rem 4rem 2rem 4rem ;
 			border-top: solid 2px #eeeeee;
 			margin: 0;
 		}
@@ -3964,7 +3934,7 @@ video.controls
 				}
 
 				#main > .posts > article:nth-child(-n + 2) {
-					border-top-width: 0px;
+					border-top-width: 2px;
 				}
 
 				#main > .posts > article:nth-child(n) {
